@@ -1,0 +1,730 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: auto;
+}
+.barra_menu{
+    background-color: black;
+    color: white;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: sticky;
+    z-index: 3;    
+}
+
+.elemen{
+    padding-inline-end: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.elemen:hover{
+    text-decoration: underline;
+}
+
+header{
+    position: relative;
+    display: inline-block;
+}
+.div_portada{
+    width: 100%;
+    height: auto;
+}
+.portada_imagen{
+    filter: brightness(40%);
+    width:100%;
+}
+
+#texto_portada{
+    position: absolute;
+    top:30%;
+    left: 8%;
+    color: white;
+    animation-name: canviColor;
+    animation-duration: 2s;
+}
+
+#texto_portada h1{
+    font-weight: 500;
+}
+
+#subtitulo{
+    animation-name: canviColor;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes canviColor{
+    from{opacity: 0;top:80%;}
+    to {opacity: 1;top:30%;}
+    0%{
+        color:yellow;
+
+    }
+    50%{
+        color:orange;
+    }
+    100%{
+        color: white;
+
+    }
+}
+
+#titol_pag{
+    font-weight: bold;
+}
+
+#subtitulo{
+    font-size: medium;
+    color: white;
+}
+
+.info{
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+#primerainfo{
+    flex-direction: row;
+}
+#segundainfo{
+    flex-direction: row-reverse;
+}
+
+
+.foto-primerainfo{
+    height: 10em;
+    width: auto;
+    float: left;   
+    opacity: 1;
+    border-radius: 10%;
+    box-shadow: none;
+    transition: height 3s,opacity 3s,box-shadow 1s ;
+}
+
+.foto-primerainfo:hover{
+    height: 15em;
+    opacity: 0.8;
+    box-shadow: 0px 10px 25px rgb(149, 118, 75);
+}
+
+
+.fotos-info{
+    height: 100%;
+    border-radius: 10%;
+}
+
+.foto-segundainfo{
+    height: 10em;
+    width: auto;
+    float: right;
+    align-items:self-end;
+    opacity: 1;
+    border-radius: 10%;
+    border:none;
+    transition: height 3s,opacity 3s,border 2s;
+}
+
+.foto-segundainfo:hover{
+    height: 15em;
+    opacity: 0.8;
+    border: 10px solid burlywood;
+
+}
+
+.primertext{
+    margin-left: 1em;
+}
+
+.main-principal{
+    margin-left: 12em;
+    margin-right: 12em
+}
+
+#sobre_nosaltres{
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    font-size:xx-large;
+}
+
+#carta{
+    margin-top: 4em;
+    font-size: xx-large;
+}
+
+#titol_menu{
+    background-color: #12203E;
+    color: white;
+    text-align: center;
+    margin-top: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.menu_restaurant{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 0fr 0fr;
+    row-gap: 0px;
+    column-gap: 10px;
+    grid-template-areas:
+    "menu1 contingut contingut contingut" 
+    "menu1 texto texto texto"
+    "menu1 fotos fotos fotos"
+    ;
+}
+ 
+
+.menu1{
+    grid-area: menu1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    border: 2px solid rgb(97, 139, 183);
+}
+
+.menu1_contingut{
+    grid-area: contingut;
+    margin-bottom: 0.5vw;
+    font-size:x-large;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.menu_restaurant p{
+    grid-area: texto;
+    margin-bottom: 1.5vw;
+}
+
+.fotos_menu1{
+    grid-area: fotos;
+    margin-bottom:0em;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0fr;
+    row-gap: 0px;
+    column-gap: 0px;
+    grid-template-areas: 
+    "f1 f2"
+    ;
+    
+}
+
+.foto{
+    height: 13vw;
+    width: 18vw;
+    position: relative;
+}
+
+.foto img{
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.piefoto{
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1; 
+    width: 100%;
+    opacity:1;
+    color: white;
+    font-size: 14px;
+    padding: 11px;
+    text-align: center;
+}
+
+#foto1{
+    grid-area: f1;
+}
+#foto2{
+    grid-area: f2;
+}
+
+#imagenes_galeria{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.imagen_galeria{
+    height: 10vw;
+    width: 15vw;
+    padding: 0.5vw;
+    margin-block-end: 1vw;
+    border: 1px rgb(106, 106, 106);
+    border-style: double;
+    transition: filter 2s, transform 2s;
+    overflow: hidden;
+}
+
+#ioscuro {
+    filter: brightness(60%);
+}
+
+.imagen_galeria:hover{
+    box-shadow: -1px 1px 10px aqua;
+    transform: scale(1.2)rotate(10deg);
+    filter: grayscale(100%); 
+}
+
+.imagen_galeria img:hover{
+    filter:brightness(30%)
+}
+
+.imagen_galeria img{
+    height: 100%;
+    width: auto;
+}
+
+#galeria_titol{
+    font-size: xx-large;
+    margin-top: 6vw;
+}
+
+
+
+/*video*/
+
+#titol_video{
+    margin-top: 4vw;
+}
+#video_contenidor{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+#videos{
+    width: 55vw;
+}
+
+#videos video{
+    width: 100%;
+    height: auto;
+}
+
+/*
+.
+.
+.
+FOOTER CON FLEX
+.
+.
+.
+.*/
+
+.footer-main{
+    margin-top: 3vw;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+}
+
+.contactos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 1vw;
+}
+.contactos a{
+    text-align: center;
+}
+.contactos i{
+    font-size: 1em;
+}
+
+.mail{
+    margin-right: 2vw;
+}
+
+
+
+
+/*
+.
+.
+EN TABLET 768PX
+.
+.
+*/
+
+@media(max-width:768px){
+    .barra_menu{
+        background-color: white;
+        color:black;
+        justify-content: flex-start;
+    }
+    
+    .elemen{
+        padding-inline-start: 1em;
+    }
+    
+    #texto_portada{
+        top: 10%;
+    }
+
+    .main-principal{
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+    .info{
+        flex-direction: column;
+    }
+    #primerainfo{
+        flex-direction: column;
+        margin-bottom: 3em;
+    }
+    #segundainfo{
+        flex-direction: column;
+    }
+    .fotos-info{
+        border-radius: 2%;
+    }
+    .foto-primerainfo{
+        height: 25em;
+        margin-bottom: 0.5em;
+    }
+
+    .foto-segundainfo{
+        height: 25em;
+        margin-bottom: 0.5em;
+    }
+    .fotos-info{
+        border-radius: 2%;
+    }
+    .info a{
+        flex-direction: column;
+        margin-left: 0;
+        text-align: justify;
+        line-height: 1.5em;
+    }
+
+    #carta{
+        margin-top: 1.5em;
+        font-size:xx-large;
+    }
+    #titol_menu{
+        border-radius: 1%;
+        font-size: larger;
+        margin-bottom: 0em;
+    }
+    .menu_restaurant{
+        margin-top: 0.3vh;
+        
+
+    }
+    .fotos_menu1{
+        grid-template-columns: 0fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas: 
+        "f1"
+        "f2"
+        ;
+    }
+    .foto{
+        height: 38vw;
+        width: auto;
+        padding: 1vw;
+        border: 1px solid rgb(202, 202, 202);
+        border-radius: 2%;
+    }
+    
+    .f1{
+        margin-bottom: 4vw;
+    }
+    .piefoto{
+        width: 83.3%;
+        margin-bottom: 1vw;
+        padding: 30px;
+        font-size: 1.3em;
+        font-weight:300;
+    }
+    .menu1_contingut{
+        font-size: xx-large;
+        margin-top: 3vw;
+        margin-bottom: 0vw;
+    }
+    .menu_restaurant p{
+        font-size: large;
+    }
+
+    #imagenes_galeria{
+       margin-left: 3vw;
+       margin-right: 3vw;
+    }
+    .imagen_galeria{
+        width: 31vw;
+        height: 17vw;
+        padding: 0.8vw;
+        border-radius: 5px;
+    }
+    .imagen_galeria img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /*
+    .
+    .
+    FOOTER
+    .
+    */
+    .footer-main{
+        padding: 3vw;
+        justify-content:space-around;
+    }
+    .contactos{
+        display:contents;
+    }
+    .footer-main a{
+        font-size: 1.2em;
+    }
+    .contactos a{
+        text-align: center;
+        margin-top: 0%;
+    }
+    .contactos i{
+        font-size: 1.5em;
+    }
+    .mail a{
+        align-content: center;
+        text-align: center;
+    }
+    .foot-restaurant{
+        text-align: center;
+        align-content: center;
+        margin-top: 0.7vw;
+    }
+}
+
+/*
+.
+.
+EN MOVIL 576
+.
+.
+*/
+
+@media (max-width:576px){
+    .barra_menu{
+        padding-top: 2vw;
+        padding-bottom: 1vw;
+    }
+
+    .div_portada{
+        height: 48vw;
+    }
+    .portada_imagen{
+        height: 100%;
+    }
+
+    .main-principal{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    #sobre_nosaltres{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .foto-primerainfo{
+        height: 22.5em;
+        margin-bottom: 0.5em;
+    }
+    .foto-segundainfo{
+        height: 22.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .primertext{
+        margin-left: 0em;
+    }
+
+    .info a{
+        line-height: 1.7em;
+    }
+
+/*
+.
+CARTA
+.
+*/
+
+    #carta{
+        margin-top: 3em;
+        margin-bottom: 2em;
+        font-size:xx-large;
+        text-align: center;
+    }
+
+    #titol_menu{
+        display: none;
+    }
+
+    .menu_restaurant{
+        
+        margin-top: 0.3vh;
+        display: grid;
+        grid-template-columns:0fr;
+        grid-template-rows:0.3fr 0.2fr 0.7fr 1fr 1fr;
+        column-gap: 0px;
+        row-gap: 0px;
+        grid-template-areas: 
+        "menu1"
+        "contingut"
+        "texto"
+        "fotos"
+        "fotos"
+        ;
+    }
+
+    .menu1{
+        grid-area: menu1;
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+        font-size: larger;
+        height: 15vw;
+        width:100%;
+    }
+
+    .menu1_contingut{
+        grid-area: contingut;
+        margin-top: 5vw;
+        margin-bottom: 0vw;
+    }
+
+    .menu_restaurant p{
+        grid-area: texto;
+        margin-top: 1vw;
+        width: 100%;
+        line-height: 4.5vw;
+    }
+
+    .fotos_menu1{
+        grid-template-columns: 0fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas: 
+        "f1"
+        "f2"
+        ;
+    }
+    .foto{
+        margin-top: 0vw;
+        height: 50vw;
+        width: 91vw;
+        margin-bottom: 4vw;
+        padding: 1vw;
+        border: 1px solid rgb(202, 202, 202);
+        border-radius: 2%;
+    }
+
+    .foto img{
+        width: 100%;
+    }
+    
+    .piefoto{
+        width:90.3%;
+        margin-bottom: 1vw;
+        padding: 20px;
+        font-size: 1.3em;
+        font-weight:300;
+    }
+    .menu1_contingut{
+        font-size: xx-large;
+        margin-bottom: 0vw;
+    }
+    .menu_restaurant p{
+        font-size: large;
+    }
+
+
+    #galeria_titol{
+        margin-top: 14vw;
+        margin-bottom: 9vw;
+        text-align: center;
+        font-size:xx-large;
+    }
+
+    #imagenes_galeria{
+       margin-left: 0vw;
+       margin-right: 0vw;
+    }
+    .imagen_galeria{
+        width: 100%;
+        height: 50vw;
+        padding: 0.8vw;
+        border-radius: 5px;
+        margin-bottom: 3vw;
+        border: 1px rgb(171, 171, 171);
+        border-style: double;
+
+
+    }
+    .imagen_galeria img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #video_div{
+    }
+
+    /*
+    .
+    .
+    FOOTER
+    .
+    */
+    .footer-main{
+        padding: 3vw;
+        justify-content:flex-start;
+    }
+    .contactos{
+        display:contents;
+    }
+    .footer-main a{
+        font-size: 1.1em;
+    }
+    .contactos a{
+        text-align: center;
+        margin-top: 0%;
+    }
+    .mail{
+        margin-left: 3vw;
+    }
+    .contactos i{
+        font-size: 1.3em;
+    }
+    .mail a{
+        align-content: center;
+        text-align: center;
+        margin-right: 7vw;
+    }
+    .foot-restaurant{
+        display: none;
+    }
+
+}
