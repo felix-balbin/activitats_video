@@ -168,54 +168,9 @@
                     <span id="botonVolumen" onclick="funcionSonido()" class="material-symbols-outlined">
                         volume_off
                     </span>
-
-                    <script>
-                        var video=document.getElementById("videos");
-            
-                        var dalePlay=document.getElementById("botonPlay");
-                        var controlVolumen=document.getElementById("botonVolumen");
-
-                        function funcionPlayPause(){
-                            if(video.paused){
-                                 video.play();
-                                  dalePlay.innerHTML="pause_circle";
-                               }else{
-                                 video.pause();
-                                 dalePlay.innerHTML="play_circle";
-                             }
-                        }
-
-                        function funcionSonido(){
-                            if(video.muted){
-                                video.muted=false;
-                                controlVolumen.innerHTML="volume_up";
-                            }else{
-                                video.muted=true;
-                                controlVolumen.innerHTML="volume_off";
-                            }
-                        }
-
-                        
-                        var pasaVideo=new IntersectionObserver(function(entries){
-                            entries.forEach(entry=>{
-                                if(entry.isIntersecting){
-                                    video.play();
-                                    dalePlay.innerHTML="pause_circle";
-                                    video.muted=true;
-                                }else{
-                                    video.pause();
-                                }
-                            });
-                        },{
-                            threshold:0.5
-                        });
-                        pasaVideo.observe(video);
-                                   
-                    </script>
-
                 </div>
-
             </div>
+        </div>
        
     </main>
     
