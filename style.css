@@ -542,6 +542,10 @@ EN TABLET 768PX
         align-content: center;
         margin-top: 0.7vw;
     }
+
+    .botones{
+        width: 20%;
+      }
 }
 
 /*
