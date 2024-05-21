@@ -198,6 +198,21 @@
                 }
             }
 
+            
+            var pasaVideo=new IntersectionObserver(function(entries){
+                entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                        video.play();
+                        dalePlay.innerHTML="pause_circle";
+                        video.muted=true;
+                    }else{
+                        video.pause();
+                    }
+                });
+            },{
+                threshold:0.5
+            });
+            pasaVideo.observe(video);
                        
         </script>
        
