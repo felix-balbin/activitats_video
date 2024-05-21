@@ -302,39 +302,6 @@ header{
     margin-top: 4vw;
 }
 
-/*
-#video_contenidor{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2vw;
-    position: relative;
-}
-
-#video_principal{
-    width: 55vw;
-    height: auto;
-}
-
-#video_principal video{
-    width: 100%;
-    height: auto;
-    position: relative;
-
-    
-}
-
-.barra_video{
-    position: absolute;
-    top: 5;
-    background: rgba(139, 139, 139, 0.5);
-    color: #c30000;
-    opacity: 1;
-    width: 100%;
-    padding: 10px;
-}*/
-
 
 .container_video {
     display: flex;
