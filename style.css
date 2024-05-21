@@ -301,22 +301,79 @@ header{
 #titol_video{
     margin-top: 4vw;
 }
+
+/*
 #video_contenidor{
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
     margin-top: 2vw;
+    position: relative;
 }
 
-#videos{
+#video_principal{
     width: 55vw;
-}
-
-#videos video{
-    width: 100%;
     height: auto;
 }
+
+#video_principal video{
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    
+}
+
+.barra_video{
+    position: absolute;
+    top: 5;
+    background: rgba(139, 139, 139, 0.5);
+    color: #c30000;
+    opacity: 1;
+    width: 100%;
+    padding: 10px;
+}*/
+
+
+.container_video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+
+    position: relative;
+    width: 55vw;
+  }
+  
+  #videos{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute; 
+    top: 0; 
+    background: rgba(0, 0, 0, 0.736); /* Black see-through */
+    color: #ffffff; 
+    width: 100%;
+    opacity:1;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+  }
+
+  .botones{
+    width: 10%;
+    display: flex;
+    align-items: self-end;
+    
+    justify-content: space-around;
+    margin-left: auto;
+  }
+
 
 /*
 .

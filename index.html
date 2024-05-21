@@ -150,8 +150,10 @@
         </div>
 
         <h2 id="titol_video">Vídeos del restaurant</h2>
+
+        <!--
         <div id="video_contenidor">
-            <div id="videos">
+            <div id="video_principal">
                 <video controls muted>
                     <source src="./imagen/videos/video_restaurant.mp4" type="video/mp4">
                     <source src="./imagen/videos/video_restaurant_2.ogg" type="video/ogg">
@@ -160,7 +162,71 @@
                     Your browser does not support HTML video.
                   </video>
             </div>
+            
+            <div class="barra_video">
+                <p>hiiiiii halloooooo</p>
+            </div>
+        
         </div>
+    -->
+
+       <!-- <div id="totalVideo">-->
+
+            <div class="container_video">
+                <video id="videos" muted>
+                    <source src="./imagen/videos/video_restaurant.mp4" type="video/mp4">
+                    <source src="./imagen/videos/video_restaurant_2.ogg" type="video/ogg">
+                    <source src="./imagen/videos/video_restaurant_3.webm" type="video/webm">
+    
+                    Your browser does not support HTML video.
+                </video>
+
+                <div class="overlay">
+
+                    <div class="botones">
+                        <span id="botonPlay" onclick="funcionPlayPause()" class="material-symbols-outlined">
+                            play_circle
+                        </span>
+                        <span id="botonVolumen" onclick="funcionSonido()" class="material-symbols-outlined">
+                            volume_off
+                        </span>
+
+                        <script>
+                            var video=document.getElementById("videos");
+
+                            var dalePlay=document.getElementById("botonPlay");
+
+                            var controlVolumen=document.getElementById("botonVolumen");
+
+                            function funcionPlayPause(){
+                                if(video.paused){
+                                    video.play();
+                                    dalePlay.innerHTML="pause_circle";
+                                }else{
+                                    video.pause();
+                                    dalePlay.innerHTML="play_circle";
+                                }
+                            }
+
+                            function funcionSonido(){
+                                if(video.muted){
+                                    video.muted=false;
+                                    controlVolumen.innerHTML="volume_up";
+                                }else{
+                                    video.muted=true;
+                                    controlVolumen.innerHTML="volume_off";
+                                }
+                            }
+                                
+                            
+                            
+                        </script>
+
+                    </div>
+
+                </div>
+            </div>
+        <!--</div>-->
        
     </main>
     
